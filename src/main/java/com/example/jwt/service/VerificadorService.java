@@ -14,7 +14,7 @@ public class VerificadorService{
     @Autowired
     private UsinaService usinaService;
 
-    @Scheduled(fixedRate = 1000*10) // atualiza a cada um minuto
+    @Scheduled(fixedRate = 1000*60) // atualiza a cada um minuto
     public void atualiza_status_usina(){
 
         System.out.println("Verificando status da usina");
