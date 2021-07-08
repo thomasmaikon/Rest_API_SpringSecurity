@@ -40,4 +40,16 @@ public class UsinaService {
         }
         return ResponseEntity.status(HttpStatus.CONFLICT).body("Usina " + usina.getHash()+ " nao existe");
     }
+
+    public void atualizar_usina(UsinaModel usina_atualizada){
+        var usina = usinaRepository.findById(usina_atualizada.getHash()).orElse(null);
+        if (usina != null){
+            usinaRepository.save(usina_atualizada);
+        }
+
+    }
+
+    public List<UsinaModel> pegar_todas(){
+        return usinaRepository.findAll();
+    }
 }

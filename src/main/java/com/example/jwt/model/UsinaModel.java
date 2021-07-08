@@ -12,12 +12,13 @@ import javax.persistence.PrimaryKeyJoinColumn;
 public class UsinaModel {
 
 
-    private String people;
+
 
     @Id
     @Column(unique = true)
-
     private String hash;
+    private String status = "off";
+    private String people;
 
     public UsinaModel() { }
 
@@ -40,5 +41,13 @@ public class UsinaModel {
 
     public void setHash(String hash) {
         this.hash = hash;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
