@@ -41,7 +41,7 @@ public class HomeController {
 
     @GetMapping("/home")
     public String home(){
-        return "Benvindo ao video do indiano";
+        return "Testando JWT";
     }
 
     @PostMapping("/logar")
